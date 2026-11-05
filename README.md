@@ -71,8 +71,17 @@ The forecasts suggest gradual nominal wage growth, but policymakers should exami
 ## Technologies
 Python · Pandas · NumPy · Matplotlib · Statsmodels · Scikit-learn · SciPy · Google Colab · Excel
 
+## ARIMA and SARIMA Forecasting Activity
+
+The repository also contains `Actividad_Salarios_SARIMA_FINAL.ipynb`, a separate Google Colab exercise using the same 120 monthly observations (2012–2021). It compares a nonseasonal ARIMA model with a seasonal SARIMA model and evaluates both on a chronological 2020–2021 test period. Seasonal length is set to 12 months to capture recurring annual wage patterns.
+
+The notebook forecasts monthly hourly compensation for January 2022 through December 2024, shows fitted and forecast values, calculates MSE, RMSE, MAPE, and MPE, and compares the results with additive and multiplicative Holt-Winters and decomposition methods. SARIMA achieved approximately 1.237 RMSE and 0.925% MAPE on the test period in the recorded analysis; these are historical holdout results, not guarantees of future accuracy.
+
+To run it in Google Colab, upload `Ejercicio_Salarios.xlsx` to the runtime and execute the notebook cells in order. Dependencies are listed in `requirements.txt`, and the notebook installs `pmdarima` in its first code cell.
+
 ## Files and Reproducibility
-- `Quiz_Holt_Winters.ipynb`: the analysis and forecasting notebook.
+- `Quiz_Holt_Winters.ipynb`: the original Holt-Winters analysis notebook (if available locally).
+- `Actividad_Salarios_SARIMA_FINAL.ipynb`: ARIMA and SARIMA forecasting activity.
 - `Ejercicio_Salarios.xlsx`: the course dataset required to rerun the notebook. **Not included here**; place it in the Colab working directory before running.
 
 ## Context
